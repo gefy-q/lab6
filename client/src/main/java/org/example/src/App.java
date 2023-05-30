@@ -1,4 +1,5 @@
-package org.example.src;/*
+package org.example.src;
+/*
 Считывает файл по полученному пути и заполняет коллекцию, если файла нет - возвращает ошибку
 После вызывает view-menu где происходят основные действия
  */
@@ -26,6 +27,7 @@ public class App {
         } catch (IOException e) {
             System.err.println("Error: Cannot read data file.");
             readFile(controller);
+
         }
 
         BufferedReader inputReader = new BufferedReader(new InputStreamReader(System.in));
