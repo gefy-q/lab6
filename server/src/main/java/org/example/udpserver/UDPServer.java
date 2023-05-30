@@ -1,13 +1,12 @@
 package org.example.udpserver;
 
+import org.example.src.App;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
-
-import org.example.src.App;
-import org.example.src.ui.View;
 
 public class UDPServer {
 
@@ -43,8 +42,8 @@ public class UDPServer {
 
             DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, port);
             serverSocket.send(sendPacket);
-//            serverSocket.close();
-//            break;
+            serverSocket.close();
+            break;
         }
     }
 }
